@@ -10,30 +10,27 @@
  * @return {string}
  */
 var longestCommonPrefix = function(strs) {
-    // 仅需比较最大 和最小 字符串的最长公共前缀
-    let prefix='';
-    if(strs.length<1){
-        return  prefix
+
+    // 数组长度为0 直接返回''
+    if(strs.length<=0){
+        return ''
     }
-    let newStrs=strs.sort((a,b)=>{
-        return a.length-b.length
-    })
-    let min =newStrs[0];
-    let max= newStrs[newStrs.length-1]
-    
-    for (let i = 0; i < min.length; i++) {
-        const item = min[i];
-        if(min[i]===max[i]){
-            prefix+= min[i]
-        }else {
-            return  prefix
-        }
+    strs.sort((a,b)=> a-b);
+    let res='';
+    let  str=strs[0];
+    for (let i = 0; i < str.length; i++) {
+        // 循环数组  比较 item[i]  str[i] 
+        // 存在flag 说明公共前缀有 当前这个字符
+        // 把字符加到公共前缀中
+       let flag= strs.every(item=>item[i]==str[i])
+       if(flag){
+           res+=str[i]
+       }else {
+           return res;
+       }
         
     }
-    return  prefix
-    // console.log(newStrs)
-    
+    return res
 };
 // @lc code=end
 
-// longestCommonPrefix(["flower333","flow","flight","flo"])
