@@ -1,4 +1,11 @@
 /*
+ * @Author: zhuchuanyong
+ * @Date: 2020-08-12 14:33:25
+ * @LastEditors: zhuchuanyong
+ * @LastEditTime: 2020-12-29 20:11:36
+ * @FilePath: \1.两数之和.js
+ */
+/*
  * @lc app=leetcode.cn id=1 lang=javascript
  *
  * [1] 两数之和
@@ -47,8 +54,9 @@ var twoSum = function (nums, target) {
         let dif = target - item // 计算目标值与当前值得差
 
         // 在map里查找dif  dif的值 和 i 就是要返回的结果
-        let difIndex=map.get(dif)  
+        let difIndex=map.get(dif)  // map.get 取不到会返回undefined
 
+        // if(difIndex) 不能这样判断 map 的第一个值会是0
         if(difIndex!==undefined){
             return [difIndex,i]
         }

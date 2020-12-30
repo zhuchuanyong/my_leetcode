@@ -1,4 +1,11 @@
 /*
+ * @Author: zhuchuanyong
+ * @Date: 2020-08-12 14:33:25
+ * @LastEditors: zhuchuanyong
+ * @LastEditTime: 2020-12-30 10:40:52
+ * @FilePath: \9.回文数.js
+ */
+/*
  * @lc app=leetcode.cn id=9 lang=javascript
  *
  * [9] 回文数
@@ -25,6 +32,7 @@ var isPalindrome = function(x) {
     //     return false
     // }
 
+    //  翻转参数后进行比较
     return x.toString() == x.toString().split("").reverse().join("");
 
 
