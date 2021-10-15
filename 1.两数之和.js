@@ -47,6 +47,7 @@
  *  
  */
 var twoSum = function (nums, target) {
+    // 记录已经遍历过的数字及其对应的索引值
     let map = new Map()
     for (let i = 0; i < nums.length; i++) {
         const item = nums[i];
@@ -54,14 +55,11 @@ var twoSum = function (nums, target) {
         let dif = target - item // 计算目标值与当前值得差
 
         // 在map里查找dif  dif的值 和 i 就是要返回的结果
-        let difIndex=map.get(dif)  // map.get 取不到会返回undefined
-
-        // if(difIndex) 不能这样判断 map 的第一个值会是0
-        if(difIndex!==undefined){
-            return [difIndex,i]
+        if(map.has(dif)){
+            return   [ map.get(dif),i]
         }
-        //找不到   用map存当前  值,索引
-        map.set(nums[i], i)
+        //找不到   用map存当前值,索引
+        map.set(item, i)
     }
 };
 // @lc code=end
