@@ -29,9 +29,8 @@ var isValid = function (s) {
     // 储存左边括号
     const stk = [];
 
-    let sarr=s.split('')
-    for (let i = 0; i < sarr.length; i++) {
-        const item = sarr[i];
+    for (let i = 0; i < s.length; i++) {
+        const item = s[i];
          // 右括号
          if (pairs.has(item)) {
             // 是右括号 stk中没有左括号 返回false
