@@ -31,5 +31,7 @@ function searchInsert(nums: number[], target: number): number {
  
 
 };
+
+searchInsert([1,3,6,8,9],5)
 // @lc code=end
 
