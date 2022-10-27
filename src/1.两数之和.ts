@@ -6,17 +6,16 @@
 
 // @lc code=start
 function twoSum(nums: number[], target: number): number[] {
-  let map =new Map();
+  const map = new Map();
   for (let i = 0; i < nums.length; i++) {
     const item = nums[i];
-    let dif=target -item
-    if(map.has(dif)){
-      return [map.get(dif),i]
-    }else {
-      map.set(item,i)
+    const dif = target - item;
+    if (map.has(dif)) {
+      return [map.get(dif), i];
+    } else {
+      map.set(item, i);
     }
   }
-  return []
-};
+  return [];
+}
 // @lc code=end
-

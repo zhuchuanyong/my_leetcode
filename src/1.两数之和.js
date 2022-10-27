@@ -19,7 +19,7 @@
 //  * @param {number[]} nums
 //  * @param {number} target
 //  * @return {number[]}
-//  *  
+//  *
 //  */
 // var twoSum = function (nums, target) {
 //     for (let i = 0; i < nums.length; i++) {
@@ -27,7 +27,7 @@
 //         const dif = target - item; // 差
 
 //         // j = i + 1 的目的是减少重复计算和避免两个元素下标相同
-//         // 内层必定比外层至少大于1 
+//         // 内层必定比外层至少大于1
 //         for (let j = i + 1; j < nums.length; j++) {
 //             if(nums[j]===dif){
 //                 return [i,j]
@@ -36,31 +36,28 @@
 //     }
 // };
 
-
-
 /**
  * 使用map
  * map 也可以换成对象
  * @param {number[]} nums
  * @param {number} target
  * @return {number[]}
- *  
+ *
  */
 var twoSum = function (nums, target) {
-    // 记录已经遍历过的数字及其对应的索引值
-    let map = new Map()
-    for (let i = 0; i < nums.length; i++) {
-        const item = nums[i];
+  // 记录已经遍历过的数字及其对应的索引值
+  let map = new Map();
+  for (let i = 0; i < nums.length; i++) {
+    const item = nums[i];
 
-        let dif = target - item // 计算目标值与当前值得差
+    let dif = target - item; // 计算目标值与当前值得差
 
-        // 在map里查找dif  dif的值 和 i 就是要返回的结果
-        if(map.has(dif)){
-            return   [ map.get(dif),i]
-        }
-        //找不到   用map存当前值,索引
-        map.set(item, i)
+    // 在map里查找dif  dif的值 和 i 就是要返回的结果
+    if (map.has(dif)) {
+      return [map.get(dif), i];
     }
+    //找不到   用map存当前值,索引
+    map.set(item, i);
+  }
 };
 // @lc code=end
-

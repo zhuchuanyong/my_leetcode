@@ -1,5 +1,12 @@
 {
-  //   "prettier.semi": false,
-  "prettier.tabWidth": 2,
-  "prettier.requirePragma": true // . 后不换行
+    // "prettier.semi": false,
+  // "prettier.tabWidth": 2,
+  // "prettier.requirePragma": true // . 后不换行
+  // "prettier.endOfLine": "auto",
+  "editor.codeActionsOnSave": {
+    // "source.fixAll.tslint": true,
+    "source.fixAll.eslint": true,
+    // "source.fixAll.stylelint": true
+    // "source.organizeImports": true // 这个属性能够在保存时，自动调整 import 语句相关顺序，能够让你的 import 语句按照字母顺序进行排列
+  },
 }

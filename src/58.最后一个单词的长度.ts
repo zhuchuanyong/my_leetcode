@@ -7,8 +7,7 @@
 // @lc code=start
 function lengthOfLastWord(s: string): number {
   // api 战士
-  const strs=s.trim().split(" ");
-  return strs[strs.length-1].length;
-};
+  const strs = s.trim().split(" ");
+  return strs[strs.length - 1].length;
+}
 // @lc code=end
-
