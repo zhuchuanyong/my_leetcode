@@ -9,4 +9,5 @@
 // console.log('show', show)
 // import './26.删除有序数组中的重复项.js'
 // import './27.移除元素.js'
-import './src/35.搜索插入位置.ts'
+// import './src/35.搜索插入位置.ts'
+import './src/121.买卖股票的最佳时机.ts'
